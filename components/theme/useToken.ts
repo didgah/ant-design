@@ -2,7 +2,7 @@ import React from 'react';
 import type { Theme } from '@ant-design/cssinjs';
 import { useCacheToken } from '@ant-design/cssinjs';
 
-import version from '../version';
+//import version from '../version';
 import type { DesignTokenProviderProps } from './context';
 import { defaultTheme, DesignTokenContext } from './context';
 import type { AliasToken, GlobalToken, SeedToken } from './interface';
@@ -126,7 +126,7 @@ export default function useToken(): [
     cssVar,
   } = React.useContext(DesignTokenContext);
 
-  const salt = `${version}-${hashed || ''}`;
+  const salt = `${hashed || ''}`;
 
   const mergedTheme = theme || defaultTheme;
 

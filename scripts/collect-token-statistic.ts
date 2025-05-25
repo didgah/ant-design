@@ -1,10 +1,9 @@
 import React from 'react';
 import chalk from 'chalk';
 import cliProgress from 'cli-progress';
-import fs from 'fs-extra';
 import ReactDOMServer from 'react-dom/server';
 
-import { DesignTokenContext, statistic } from '../components/theme/internal';
+import { DesignTokenContext } from '../components/theme/internal';
 import seedToken from '../components/theme/themes/seed';
 import { generateCssinjs, styleFiles } from './generate-cssinjs';
 
@@ -46,7 +45,7 @@ bar.start(styleFiles.length, 0);
     },
   });
   bar.stop();
-  const tokenPath = `${process.cwd()}/components/version/token.json`;
-  fs.writeJsonSync(tokenPath, statistic, 'utf8');
-  console.log(chalk.green(`✅ Collected token statistics successfully, check it in`), tokenPath);
+  // const tokenPath = `${process.cwd()}/components/version/token.json`;
+  // fs.writeJsonSync(tokenPath, statistic, 'utf8');
+  // console.log(chalk.green(`✅ Collected token statistics successfully, check it in`), tokenPath);
 })();
